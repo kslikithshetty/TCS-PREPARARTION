@@ -74,4 +74,32 @@ x=int(input())
 arr=list(map(int,input().split()))
 
 print(first_number(arr,x),last_number(arr,x))
+
+
+4 majority element n//2
+
+def majority_element(arr):
+    candidate=None
+    count=0
+   
+    for num in arr:
+        if count==0:
+           candidate=num
+        if num==candidate:
+            count +=1
+        else:
+            count -=1
+    count = 0 #used for checking
+    for num in arr:
+        if num==candidate:
+            count +=1
+        if count>len(arr)//2: #this also used for the cross cheking
+            return candidate
+    return -1
+    
+n=int(input())
+
+arr=list(map(int,input().split()) )
+
+print(majority_element(arr))
     
