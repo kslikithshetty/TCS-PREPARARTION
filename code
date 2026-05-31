@@ -124,6 +124,18 @@ arr=list(map(int,input().split()))
 print(two_sum(arr,target))                        
 
 
+6.trnspose of a matrix ( row becomes coloum)
+r = int(input())
+c = int(input())
+
+matrix = [list(map(int, input().split())) for _ in range(r)]
+
+for j in range(c):                           #normal matric change the i (r)  && j (c)
+    for i in range(r):
+        print(matrix[i][j], end="   ")
+    print()
+    
+
 
 
 
