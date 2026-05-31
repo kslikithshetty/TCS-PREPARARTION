@@ -102,4 +102,29 @@ n=int(input())
 arr=list(map(int,input().split()) )
 
 print(majority_element(arr))
+
+
+ 5 .two sum (sor t e  d input )
+
+def two_sum(arr,target):
+    map={}
+    
+    for i in range(len(arr)):
+        required=target-arr[i]
+        
+        if required in map:
+            return map[required],i
+        map[arr[i]]=i   #used for storeing the map(key) and the index value (map=1:index=0)  
+    return -1        
+    
+n=int(input())
+target=int(input())
+arr=list(map(int,input().split()))
+
+print(two_sum(arr,target))                        
+
+
+
+
+
     
