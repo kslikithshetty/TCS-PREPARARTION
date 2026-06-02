@@ -134,6 +134,22 @@ for j in range(c):                           #normal matric change the i (r)  &&
     for i in range(r):
         print(matrix[i][j], end="   ")
     print()
+
+6.replace element by its rank in the array
+def replace_with_rank(arr):
+    rank_map={}
+    rank=1
+    for num in sorted(arr):  #used for the sorting
+        if num not in rank_map:    #checking the num(elements are present in the in the rank_map)it will be emty we start adding
+            rank_map[num]=rank     #stored and give the rank
+            rank +=1               #inrcreasing the rank
+    return[rank_map[num] for num in arr]  #it is teh alternate for the for loop
+
+n=int(input().strip())  #strip is used for the removeing the space form thr character fron and back  (_7_)
+arr=list(map(int,input().split()))
+result=replace_with_rank(arr)
+print(*result)   #used for the unzping the list insted of for loop
+            
     
 
 
