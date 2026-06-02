@@ -166,6 +166,31 @@ str2=input().strip()
 print(removeCharacter(str1,str2))
 
 
+8. fidn all the non repeating element ina an array
+
+def removerepeating(arr):
+    freq={}
+    
+    for num in arr:
+        freq[num]=freq.get(num,0) +1   it is sued for counting like [ 1:1,2,3 2:1 -1:1) it will kelping howmuch time repeated
+    result=[]
+    for num in arr:
+        if freq[num]==1:
+            result.append(num)
+    return result
+
+n=int(input())
+arr=list(map(int,input().split()))
+result=removerepeating(arr)
+if result:
+    print(result)
+else:
+    print(-1)
+
+
+            
+
+
 
 
     
