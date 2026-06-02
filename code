@@ -149,8 +149,21 @@ n=int(input().strip())  #strip is used for the removeing the space form thr char
 arr=list(map(int,input().split()))
 result=replace_with_rank(arr)
 print(*result)   #used for the unzping the list insted of for loop
-            
+
+7.remove character from first string present in second string
+
+def removeCharacter(str1,str2):
+    remove_set=set(str2)
     
+    result=[]
+    for ch in str1:
+        if ch not in remove_set:   
+            result.append(ch)
+    return"".join(result)    creating the string by "" and joining the result 
+
+str1=input().strip()
+str2=input().strip()
+print(removeCharacter(str1,str2))
 
 
 
